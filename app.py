@@ -4,7 +4,10 @@ import os
 app = Flask(__name__)
 
 
-PROJECTS = []
+PROJECTS = [
+    r"C:\\Python\\Suivi_nommage_projets"
+
+]
 
 
 @app.route("/")
@@ -47,7 +50,7 @@ def get_logs():
     for log in log_files:
         with open(os.path.join(LOG_DIR, log)) as f:
             log_content = f.readlines()
-            logs += "\n".join([line.strip() for line in log_content])
+            logs += "\n\n".join([line.strip() for line in log_content])
     
     return jsonify({"success": True, "log_content": logs})
 
@@ -55,4 +58,4 @@ def get_logs():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0")

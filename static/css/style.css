@@ -42,15 +42,15 @@ button:hover {
 
 textarea {
     width: 90%;
-    max-width: 800px;
-    height: 300px;
+    max-width: 1200px;
+    height: 600px;
     padding: 15px;
     margin: 20px auto;
     display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: monospace;
-    font-size: 1em;
+    font-size: 1.5em;
     background-color: #fafafa;
     color: #333;
 }
